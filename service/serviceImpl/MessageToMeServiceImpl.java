@@ -4,13 +4,14 @@ import cn.edu.bjtu.weibo.service.MessageToMeService;
 import cn.edu.bjtu.weibo.dao.*;
 import org.springframework.*;
 
+@Service
 public class MessageToMeServiceImpl implements MessageToMeService {
 
-	// @autowired
+	@Autowired
 	UserDAO userDao;
-	// @autowired
+	@Autowired
 	CommentDAO commentDao;
-	// @autowired
+	@Autowired
 	WeiboDAO weiboDao;
 
 
