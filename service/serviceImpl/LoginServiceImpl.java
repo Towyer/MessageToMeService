@@ -1,4 +1,4 @@
-package cn.edu.bjtu.weibo.service.Impl;
+package cn.edu.bjtu.weibo.service.serviceImpl;
 
 import java.util.Date;
 
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import cn.edu.bjtu.weibo.dao.LoginDAO;
 import cn.edu.bjtu.weibo.model.LoginUser;
 import cn.edu.bjtu.weibo.service.LoginService;
+import cn.edu.bjtu.weibo.service.serviceImpl.loginServiceImplHelper.Constant;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;

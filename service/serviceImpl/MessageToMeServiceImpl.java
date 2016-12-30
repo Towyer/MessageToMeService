@@ -1,4 +1,4 @@
-package cn.edu.bjtu.weibo.service.Impl;
+package cn.edu.bjtu.weibo.service.serviceImpl;
 
 import cn.edu.bjtu.weibo.service.MessageToMeService;
 import cn.edu.bjtu.weibo.dao.*;

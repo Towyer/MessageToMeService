@@ -1,4 +1,4 @@
-package cn.edu.bjtu.weibo.service.Impl;
+package cn.edu.bjtu.weibo.service.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package cn.edu.bjtu.weibo.service.Impl;
+package cn.edu.bjtu.weibo.service.serviceImpl.loginServiceImplHelper;
 
 public class Constant {
 	/**
