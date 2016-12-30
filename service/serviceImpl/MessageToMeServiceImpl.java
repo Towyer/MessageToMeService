@@ -2,15 +2,14 @@ package cn.edu.bjtu.weibo.service.Impl;
 
 import cn.edu.bjtu.weibo.service.MessageToMeService;
 import cn.edu.bjtu.weibo.dao.*;
-import org.springframework.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class MessageToMeServiceImpl implements MessageToMeService {
 
 	@Autowired
 	UserDAO userDao;
-	@Autowired
-	CommentDAO commentDao;
 	@Autowired
 	WeiboDAO weiboDao;
 
