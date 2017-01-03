@@ -20,7 +20,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import net.sf.json.JSONObject;
 
-@Service
+@Service("loginService")
 public class LoginServiceImpl implements LoginService {
 
 	@Autowired
@@ -30,29 +30,30 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public String getLoginUserToken(LoginUser user) {
-
-		// TODO Auto-generated method stub
+		
 		// 先验证账号是否存在
 		if (loginDao.select(user.getUsername())) {
 			// 如果存在，验证账号密码是否正确
 			String userID = loginDao.getUserId(user.getUsername(), user.getPassword());
-			if (userID == null) {
-				return "密码错误";
-			} else// 验证通过 生成token并返回
-			{
+			
+			if (userID == null||userID.isEmpty()) {
+				return null;
+			} 
+			else{
+				// 验证通过 生成token并返回
 				try {
-
+					
 					String token = createJWT(Constant.JWT_ID, generalSubject(userID), Constant.JWT_TTL);
-
+					
 					return token;
 					
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 			}
 		}
-		return "用户名不存在";
+		return null;
 	}
 
 	public static String generalSubject(String userID) {

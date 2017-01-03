@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import cn.edu.bjtu.weibo.dao.LoginDAO;
 import cn.edu.bjtu.weibo.model.LoginUser;
 import cn.edu.bjtu.weibo.service.RegisterService;
-@Service
+@Service("registerService")
 public class RegisterServiceImpl implements RegisterService {
 
 	@Autowired
